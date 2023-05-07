@@ -3,5 +3,5 @@ const { stdout } = require('process');
 const path = require('path');
 
 const input = fs.createReadStream(path.join(__dirname, 'text.txt'), 'utf-8');
-input.on('data', data => stdout.write(data));
-
+input.on('data', text => stdout.write(text));
+// input.on('data', text => console.log(text));// или второй вариант
